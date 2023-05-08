@@ -1,3 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "ArchivoBlack";
+  src: url("../public/fonts/ArchivoBlack-Regular.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "DMSans";
+  src: url("../public/fonts/DMSans-Regular.ttf");
+}
+@font-face {
+  font-family: "Exotic";
+  src: url("../public/fonts/Exotic.ttf");
+}
+
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
@@ -83,22 +101,196 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  background-color: rgb(233, 231, 231);
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+ 
 }
 
 a {
   color: inherit;
   text-decoration: none;
 }
+
+.btn-sty1 {
+  @apply bg-transparent border border-slate-300 p-1 px-4 inline-block self-baseline uppercase text-[10px] font-semibold tracking-wider transition-all cursor-pointer;
+}
+.btn-sty1:hover {
+  @apply text-blue-300 border-blue-300 shadow-lg shadow-slate-300;
+}
+
+.menu-btn{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* right: -25px; */
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  
+
+  
+}
+.menu-btn span,
+.menu-btn:before,
+.menu-btn:after{
+
+	content: "";
+	position: absolute;
+	top: calc(50% - 1px);
+	width: 80%;
+	border-bottom: 2px solid #fff;
+	transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.menu-btn:before{
+  transform: translateY(-8px);
+}
+.menu-btn:after{
+  transform: translateY(8px);
+}
+.menu-btn.open span {
+  transform: translateX(-110%);
+  border: transparent;
+}
+.menu-btn.open:before {
+  transform: rotate(45deg);
+}
+.menu-btn.open:after {
+  transform: rotate(-45deg) ;
+}
+
+
+.icon {
+  @apply bg-gray-500 w-[28px] h-[28px] rounded-full  flex justify-center items-center transition-all;
+}
+.icon:hover {
+  @apply scale-110 shadow-md shadow-slate-600;
+}
+.icon img {
+  @apply scale-[.7];
+}
+.icon2 {
+  @apply  w-[28px] h-[28px] rounded-full  flex justify-center items-center transition-all;
+}
+.icon2 img {
+  @apply scale-[.7];
+}
+
+
+
+.btn-sty3 {
+  @apply bg-[#219653] text-white inline-block p-2 px-5   rounded-sm uppercase text-[10px] font-semibold tracking-wider transition-all cursor-pointer;
+}
+.btn-sty3:hover {
+  @apply bg-[#219653]/70  shadow-md shadow-slate-300;
+}
+.btn-sty4 {
+  @apply bg-slate-900 text-white inline-block p-2 px-5   w-fit rounded-sm uppercase text-[10px] font-semibold tracking-wider transition-all cursor-pointer;
+}
+.btn-sty4:hover {
+  @apply bg-slate-800 text-slate-50 shadow-lg shadow-slate-300;
+}
+
+.bg-fixer {
+  @apply bg-[url('/pattern.png')];
+  /* background-image: url('./assets/images/pattern.png'); */
+  /* background-size: 100% 100%; */
+}
+
+.bg-hor {
+  @apply bg-[url('/pattern.png')];
+  /* background-image: url('./assets/images/pattern.png'); */
+  background-size: 100% 100%;
+}
+
+.bg-ver {
+  @apply bg-[url('/pattern-v.png')];
+  /* background-image: url('./assets/images/pattern.png'); */
+  background-size: 100% 100%;
+}
+
+.card-sty1 {
+  @apply bg-gray-100 text-black p-4;
+  box-shadow: 0 0 15px 0 #ccc;
+  transition: all .3s;
+}
+.card-sty1:hover {
+  box-shadow: 0 0 24px 0 #aaa;
+}
+.card-sty1.quote {
+  position: relative;
+}
+.card-sty1.quote::after {
+  /* @apply bg-[url('/quote.png')]; */
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0 10px;
+  background-image: url('../public/quote.png');
+  background-size: 100% 100%;
+  width: 20px;
+  height: 20px;
+}
+
+.card-sty2 {
+  @apply bg-slate-200 rounded-xl relative min-w-[200px] overflow-hidden hover:shadow-2xl hover:shadow-black transition-all;
+}
+.card-sty2:hover .img-cont img {
+  @apply scale-105;
+}
+.card-sty2 .img-cont {
+  @apply absolute z-10 h-full;
+}
+.card-sty2 .img-cont img {
+  @apply h-full w-full object-cover transition-transform duration-1000;
+}
+.card-sty2 .description {
+  @apply w-full p-6 text-white bg-gradient-to-t from-black/60 to-transparent z-20 absolute bottom-0;
+}
+
+.active{
+  
+  opacity: .9;
+
+  /* visibility: visible; */
+  transition: all 1s;
+}
+.dormant{
+
+
+  opacity: 1;
+
+  /* visibility: hidden; */
+  transition: all 1s;
+  /* transform: translateY(-100%); */
+}
+
+.list-sty1 > li,
+.list-sty2 > li {
+  list-style: none;
+  list-style-position: outside;
+}
+.list-sty1 > li:before,
+.list-sty2 > li:before {
+  content: '';
+  vertical-align: middle;
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  margin-right: 5px;
+  background-image: url(/TickMark.svg);
+  background-size: cover;
+}
+.list-sty2 > li:before {
+  background-image: url(/Help-Icon.png);
+}
+
 
 @media (prefers-color-scheme: dark) {
   html {
