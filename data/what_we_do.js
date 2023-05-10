@@ -53,7 +53,7 @@ export const interiorDesigns =
         name: "Cafe/Resturants",
       },
       {
-        id: 11,
+        id: 14,
         name: "Flooring",
       },
     

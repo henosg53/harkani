@@ -9,10 +9,10 @@ export default function MeetTheTeam(){
         <div id="meet_the_team" className="bg-slate-500 w-full h-fit ">
              <div className=' text-white w-full px-2 min-h-[500px] mt-24'>
         <h2 className='text-center font-ArchivoBlack font-bold text-2xl pb-10 '>Meet the team</h2>
-        <div className=" flex flex-auto flex-wrap gap-5 justify-between my-2 ">
+        <div className=" flex flex-auto flex-wrap md:flex-nowrap gap-5 justify-between my-2 ">
             <div className=" w-full flex justify-between gap-5 md:flex-col lg:flex-col lg:w-[23%] mb-5">
             
-                <Image className="rounded-full h-24 w-24 lg:rounded-none md:h-full md:w-full lg:h-fit lg:w-full"
+                <Image className="rounded-full h-24 w-24 md:rounded-none lg:rounded-none md:h-full md:w-full lg:h-fit lg:w-full"
                     src={Kena}
                     alt="Kena Adamu"
 
@@ -30,7 +30,7 @@ export default function MeetTheTeam(){
             </div>
             <div className=" w-full flex justify-between gap-5 md:flex-col lg:flex-col lg:w-[23%] mb-5">
             
-                <Image className="rounded-full h-24 w-24 lg:rounded-none md:h-full md:w-full lg:h-fit lg:w-full"
+                <Image className="rounded-full h-24 w-24 md:rounded-none lg:rounded-none md:h-full md:w-full lg:h-fit lg:w-full"
                         src={Wend}
                         alt="Wendimeneh Hailu"
 
@@ -46,7 +46,7 @@ export default function MeetTheTeam(){
             </div>
             <div className=" w-full flex justify-between gap-5 md:flex-col lg:flex-col lg:w-[23%] mb-5">
             
-                <Image className="rounded-full h-24 w-24 lg:rounded-none md:h-full md:w-full lg:h-fit lg:w-full"
+                <Image className="rounded-full h-24 w-24 md:rounded-none lg:rounded-none md:h-full md:w-full lg:h-fit lg:w-full"
                         src={Cap}
                         alt="Capital Habtamu"
 
@@ -62,7 +62,7 @@ export default function MeetTheTeam(){
             </div>
             <div className=" w-full flex justify-between gap-5 md:flex-col lg:flex-col lg:w-[23%] mb-5">
             
-                <Image className="rounded-full h-24 w-24 lg:rounded-sm md:h-full md:w-full lg:h-fit lg:w-full"
+                <Image className="rounded-full h-24 w-24 md:rounded-none lg:rounded-sm md:h-full md:w-full lg:h-fit lg:w-full"
                         src={Elen}
                         alt="Eleni Astro"
 

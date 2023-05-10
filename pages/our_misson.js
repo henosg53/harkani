@@ -10,7 +10,7 @@ export default function OurMission(){
 
                 </div>
                 <div className="mx-5 w-full md:w-[40%] lg:w-[40%] h-full">
-                    <p className="lg:mt-24 md:mt-24">Established in Addis Ababa, By Architect Kena Adam and Architect Wondimeneh Hailu.
+                    <p className="lg:mt-24 md:mt-18">Established in Addis Ababa, By Architect Kena Adam and Architect Wondimeneh Hailu.
                     Our mission is to create beautiful and functional spaces that reflect our clients'
                     personal style and enhance their quality of life. We strive to provide exceptional
                     customer service and attention to detail, while utilizing sustainable materials and
